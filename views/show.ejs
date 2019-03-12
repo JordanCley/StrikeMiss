@@ -1,0 +1,27 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <table class="ui basic celled table">
+        <thead>
+            <tr>
+                <th class="ui huge header">
+                    <%= bowler.bowler %>
+                </th>
+                <th class="ui huge header">
+                    <%= bowler.missedStrikes %>
+                    <div class="strikes">
+                        <a href="/bowlers/<%= bowler._id %>/edit">
+                            <button  class="ui inverted violet button">
+                                Edit
+                            </button>
+                        </a>
+                        <form id="delete" action="/bowlers/<%= bowler._id %>?_method=DELETE" method="POST">
+                            <button class="ui inverted red button">Delete</button>
+                        </form>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<% include ./partials/footer %>

@@ -1,0 +1,53 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <h1>
+        Ballmer's Curve
+        <a class="newBowler" href="/bowlers/new">
+            <button  class="ui inverted violet button">
+                New Bowler
+            </button>
+        </a>
+    </h1>
+    <div>
+        <table class="ui basic celled table">
+            <thead>
+            <tr>
+                <th>
+                    <h2>Bowlers</h2>
+                </th>
+                <th>
+                    <h2># Missed Strikes</h2>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <% bowlers.forEach(function(bowler){ %>
+                <tr>
+                    <td>
+                        <h2 class="ui image header"><%= bowler.bowler %></h2>
+                        <div>
+                            <a href="/bowlers/<%= bowler._id %>/">more info</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <form class="strikes" action="/bowlers/<%= bowler.id %>/increase" method="POST">
+                                <button type="submit">
+                                    <i id="rightArrow" class="chevron circle right violet icon"></i>
+                                </button>
+                            </form>
+                            <h2>
+                                <%= bowler.missedStrikes %>
+                            </h2>
+                        </div>
+                    </td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<% include ./partials/footer %>

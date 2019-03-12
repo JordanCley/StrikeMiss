@@ -1,0 +1,25 @@
+.container.main {
+    margin-top: 7.0em;
+}
+
+i.icon {
+    font-size: 2em;
+}
+
+#rightArrow {
+   background: none;
+    border: 0;
+}
+
+.newBowler {
+    float: right;
+}
+
+.strikes {
+    float: right;
+}
+
+#delete {
+    display: inline;
+}
+
