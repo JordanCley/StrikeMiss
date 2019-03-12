@@ -6,9 +6,14 @@ i.icon {
     font-size: 2em;
 }
 
-#rightArrow {
+button {
    background: none;
     border: 0;
+}
+
+
+button:focus {
+    outline: #5306a0;
 }
 
 .newBowler {
@@ -21,5 +26,13 @@ i.icon {
 
 #delete {
     display: inline;
+}
+
+a {
+    color: #5306a0;
+}
+
+a:hover {
+    color: grey;
 }
 
