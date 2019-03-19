@@ -2,6 +2,7 @@
     margin-top: 7.0em;
 }
 
+
 i.icon {
     font-size: 2em;
 }
@@ -30,6 +31,7 @@ button:focus {
 
 a {
     color: #5306a0;
+    font-size: 1.5em;
 }
 
 a:hover {

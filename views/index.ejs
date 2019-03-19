@@ -25,9 +25,8 @@
             <% bowlers.forEach(function(bowler){ %>
                 <tr>
                     <td>
-                        <h2 class="ui image header"><%= bowler.bowler %></h2>
                         <div>
-                            <a href="/bowlers/<%= bowler._id %>/">more info</a>
+                            <a href="/bowlers/<%= bowler._id %>/"><%= bowler.bowler %></a>
                         </div>
                     </td>
                     <td>
